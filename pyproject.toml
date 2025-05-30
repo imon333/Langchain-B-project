@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "langchain B Project"
+name = "langchain_B_Project"
 version = "0.1.0"
 description = "Everything you need to know to get started with LangChain"
 
