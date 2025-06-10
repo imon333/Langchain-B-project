@@ -6,11 +6,7 @@ from langchain_google_firestore import FirestoreChatMessageHistory
 from langchain_openai import ChatOpenAI
 
 """
-Steps to replicate this example:
-1. Create a Firebase account
-2. Create a new Firebase project
-    - Copy the project ID
-3. Create a Firestore database in the Firebase project
+
 4. Install the Google Cloud CLI on your computer
     - https://cloud.google.com/sdk/docs/install
     - Authenticate the Google Cloud CLI with your Google account
