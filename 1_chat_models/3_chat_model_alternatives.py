@@ -32,6 +32,7 @@ model = ChatAnthropic(model="claude-3-opus-20240229")
 result = model.invoke(messages)
 print(f"Answer from Anthropic: {result.content}")
 
+## write now i am no using antropic model .
 
 # ---- Google Chat Model Example ----
 
