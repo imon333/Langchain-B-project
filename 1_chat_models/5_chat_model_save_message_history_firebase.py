@@ -1,4 +1,3 @@
-# Example Source: https://python.langchain.com/v0.2/docs/integrations/memory/google_firestore/
 
 from dotenv import load_dotenv
 from google.cloud import firestore
@@ -6,7 +5,6 @@ from langchain_google_firestore import FirestoreChatMessageHistory
 from langchain_openai import ChatOpenAI
 
 """
-
 4. Install the Google Cloud CLI on your computer
     - https://cloud.google.com/sdk/docs/install
     - Authenticate the Google Cloud CLI with your Google account
