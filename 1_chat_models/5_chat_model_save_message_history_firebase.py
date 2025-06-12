@@ -5,11 +5,7 @@ from langchain_google_firestore import FirestoreChatMessageHistory
 from langchain_openai import ChatOpenAI
 
 """
-4. Install the Google Cloud CLI on your computer
-    - https://cloud.google.com/sdk/docs/install
-    - Authenticate the Google Cloud CLI with your Google account
-        - https://cloud.google.com/docs/authentication/provide-credentials-adc#local-dev
-    - Set your default project to the new Firebase project you created
+ - Set your default project to the new Firebase project you created
 5. Enable the Firestore API in the Google Cloud Console:
     - https://console.cloud.google.com/apis/enableflow?apiid=firestore.googleapis.com&project=crewai-automation
 """
@@ -17,7 +13,7 @@ from langchain_openai import ChatOpenAI
 load_dotenv()
 
 # Setup Firebase Firestore
-PROJECT_ID = "langchain-demo-abf48"
+PROJECT_ID = "lanchaing-aiwithbrandon"
 SESSION_ID = "user_session_new"  # This could be a username or a unique ID
 COLLECTION_NAME = "chat_history"
 
