@@ -18,7 +18,7 @@ result = model.invoke(prompt)
 print(result.content)
 
 # PART 2: Prompt with Multiple Placeholders
-print("\n----- Prompt with Multiple Placeholders -----\n")
+print("\n--- Prompt with Multiple Placeholders ----\n")
 template_multiple = """You are a helpful assistant.
 Human: Tell me a {adjective} short story about a {animal}.
 Assistant:"""
