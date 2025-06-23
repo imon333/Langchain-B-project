@@ -25,8 +25,10 @@ parse_output = RunnableLambda(lambda x: x.content)
 # Create the RunnableSequence (equivalent to the LCEL chain)
 chain = RunnableSequence(first=format_prompt, middle=[invoke_model], last=parse_output)
 
-# Run the chain
-response = chain.invoke({"topic": "lawyers", "joke_count": 3})
+# Run the chain here
+result = chain.invoke({"topic": "lawyers", "joke_count": 3})
 
-# Output
-print(response)
+# Output --
+print(result)
+
+##this is some basic example
