@@ -13,13 +13,13 @@ print("-----Prompt from Template-----")
 template = "Tell me a joke about {topic}."
 prompt_template = ChatPromptTemplate.from_template(template)
 
-prompt = prompt_template.invoke({"topic": "cats"})
+prompt = prompt_template.invoke({"topic": "donald trump"})
 result = model.invoke(prompt)
 print(result.content)
 
 # PART 2: Prompt with Multiple Placeholders
 print("\n--- Prompt with Multiple Placeholders ----\n")
-template_multiple = """You are a helpful assistant.
+template_multiple = """You are a helpful assistant but for good structure uses.
 Human: Tell me a {adjective} short story about a {animal}.
 Assistant:"""
 prompt_multiple = ChatPromptTemplate.from_template(template_multiple)
@@ -31,10 +31,10 @@ print(result.content)
 # PART 3: Prompt with System and Human Messages (Using Tuples)
 print("\n----- Prompt with System and Human Messages (Tuple) -----\n")
 messages = [
-    ("system", "You are a comedian who tells jokes about {topic}."),
+    ("system", "You are a comedian who tells dark jokes about like samay raina {topic}."),
     ("human", "Tell me {joke_count} jokes."),
 ]
 prompt_template = ChatPromptTemplate.from_messages(messages)
-prompt = prompt_template.invoke({"topic": "lawyers", "joke_count": 3})
+prompt = prompt_template.invoke({"topic": "lawyers", "joke_count": 1})
 result = model.invoke(prompt)
 print(result.content)
