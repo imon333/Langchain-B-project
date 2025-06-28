@@ -13,7 +13,7 @@ model = ChatOpenAI(model="gpt-4o")
 # Define prompt template
 prompt_template = ChatPromptTemplate.from_messages(
     [
-        ("system", "You are an expert product reviewer."),
+        ("system", "You are an expert product reviewer. Who can think critically and review the product the best way as the market's best product reviewer."),
         ("human", "List the main features of the product {product_name}."),
     ]
 )
@@ -23,7 +23,7 @@ prompt_template = ChatPromptTemplate.from_messages(
 def analyze_pros(features):
     pros_template = ChatPromptTemplate.from_messages(
         [
-            ("system", "You are an expert product reviewer."),
+            ("system", "You are an expert product reviewer. Who can think critically and review the product the best way as the market's best product reviewer."),
             (
                 "human",
                 "Given these features: {features}, list the pros of these features.",
@@ -37,7 +37,7 @@ def analyze_pros(features):
 def analyze_cons(features):
     cons_template = ChatPromptTemplate.from_messages(
         [
-            ("system", "You are an expert product reviewer."),
+            ("system", "You are an expert product reviewer. Who can think critically and review the product the best way as the market's best product reviewer."),
             (
                 "human",
                 "Given these features: {features}, list the cons of these features.",
@@ -66,12 +66,12 @@ chain = (
     prompt_template
     | model
     | StrOutputParser()
-    | RunnableParallel(branches={"pros": pros_branch_chain, "cons": cons_branch_chain})
+    | RunnableParallel(branches={"pros": pros_branch_chain, "cons": cons_branch_chain}) # we have pro and cons branch parallelly
     | RunnableLambda(lambda x: combine_pros_cons(x["branches"]["pros"], x["branches"]["cons"]))
 )
 
 # Run the chain
-result = chain.invoke({"product_name": "MacBook Pro"})
+result = chain.invoke({"product_name": "Jetson super nano"})
 
 # Output
 print(result)
